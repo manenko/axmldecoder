@@ -1738,5 +1738,6 @@ fn get_resource_string(resource_id: u32) -> Option<String> {
 
     let i = resource_id - 0x0101_0000;
 
-    Some((*RESOURCE_STRINGS.get(usize::try_from(i).unwrap())?).to_string())
+    // Return "UNKNOWN" for as a workaround for now.
+    Some((*RESOURCE_STRINGS.get(usize::try_from(i).unwrap()).unwrap_or(&"UNKNOWN")).to_string())
 }
