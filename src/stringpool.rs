@@ -95,7 +95,8 @@ fn parse_utf16_string(string_data: &[u8], offset: usize) -> Result<String, Parse
 
     // Handles the case where the string is > 32767 characters
     if is_high_bit_set_16(len) {
-        unimplemented!()
+        // TODO: Temporary workaround
+        return Ok("parse_utf16_string:not_implemented".to_string());
     }
 
     // This needs to change if we ever implement support for long strings
@@ -123,7 +124,8 @@ fn parse_utf8_string(string_data: &[u8], offset: usize) -> Result<String, ParseE
     // Not quite clear if the UTF-8 encoding actually has this but
     // perform the check anyway...
     if is_high_bit_set_8(len) {
-        unimplemented!()
+        // TODO: Temporary workaround
+        return Ok("parse_utf8_string:not_implemented".to_string());
     }
 
     // This needs to change if we ever implement support for long strings
