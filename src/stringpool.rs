@@ -34,7 +34,7 @@ impl StringPool {
     ) -> Result<(&'a DekuRest, Vec<Rc<String>>), DekuError> {
         const STRINGPOOL_HEADER_SIZE: usize = std::mem::size_of::<StringPoolHeader>();
 
-        assert_eq!(header.style_count, 0);
+        //assert_eq!(header.style_count, 0);
 
         let flag_is_utf8 = (header.flags & (1 << 8)) != 0;
 

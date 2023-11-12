@@ -2,7 +2,7 @@
 name = "axmldecoder"
 description = "Decode Android's binary XML format"
 license = "MIT OR Apache-2.0"
-version = "0.6.1"
+version = "0.6.2"
 authors = ["Terry Chia <terry@ayrx.me>"]
 edition = "2021"
 repository = "https://github.com/Ayrx/axmldecoder"
@@ -11,7 +11,7 @@ exclude = ["examples/**", "axmldecoder-printer/**"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-byteorder = "1.4.3"
-deku = "~0.16"
-indexmap = "1.9.2"
-thiserror = "1.0.37"
+byteorder = "1.5.0"
+deku = "0.16.0"
+indexmap = "2.1.0"
+thiserror = "1.0.50"
